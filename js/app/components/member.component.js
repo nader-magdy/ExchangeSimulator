@@ -9,20 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var member_1 = require("../entities/member");
+var dependant_list_component_1 = require("./dependant-list.component");
+var personal_info_component_1 = require("./personal-info.component");
+var index_1 = require("../entities/index");
 var MemberComponent = (function () {
     function MemberComponent() {
-        this.onMemberChange = new core_1.EventEmitter();
-        this.member = new member_1.Member();
+        this.member = new index_1.Member();
     }
-    MemberComponent.prototype.onChange = function (newValue) {
-        this.onMemberChange.emit(this.member);
-    };
     MemberComponent = __decorate([
         core_1.Component({
             selector: 'ex-member',
-            outputs: ['onMemberChange'],
-            templateUrl: "templates/member.html"
+            moduleId: module.id,
+            templateUrl: "member.component.html",
+            directives: [dependant_list_component_1.DependentListComponent, personal_info_component_1.PersonalInfoComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], MemberComponent);

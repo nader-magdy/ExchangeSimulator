@@ -1,0 +1,108 @@
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Enrollemnt <small>New Member</small>
+        </h1>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+
+    <div class="col-lg-6">
+
+        <ex-member #mc></ex-member>
+    </div>
+    <div class="col-lg-6">
+        <span *ngIf="mc.member">
+<span class="segment">ISA</span>*00*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*00*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*ZZ*CMSFFM
+        *ZZ*956042390 *131122*1600*^*00501*000002796*1*p*:~<br>
+        <span class="segment">GS</span>*BE*WY0*47731WY0030005*20131122*1600*4461*X*005010X220A1~<br>
+        <span class="segment">ST</span>*834*897745*005010X220A1~<br>
+        <span class="segment">BGN</span>*00*897745*20131122*143753*ET***2~<br>
+        <span class="segment">QTY</span>*TO*3~<br>
+        <span class="segment">QTY</span>*DT*2~<br>
+        <span class="segment">N1</span>*P5*<strong>{{mc.member.personalInfo.firstName}}</strong> <strong>{{mc.member.personalInfo.lastName}}</strong>*FI*050285804~<br>
+        <span class="segment">N1</span>*IN*NOT AVAILABLE*FI*123456789~<br>
+        <span class="segment">INS</span>*Y*18*021*EC*A***AC~<br>
+        <span class="segment">REF</span>*0F*<strong>{{mc.member.exchangeId}}</strong>~<br>
+        <span class="segment">REF</span>*17*<strong>{{mc.member.exchangeId}}</strong>~<br>
+        <span class="segment">REF</span>*6O*WY00000536244~<br>
+        <span class="segment">DTP</span>*356*D8*20160101~<br>
+        <span class="segment">NM1</span>*IL*1*<strong>{{mc.member.personalInfo.lastName}}</strong>*<strong>{{mc.member.personalInfo.firstName}}</strong>****34*[SSN]~<br>
+        <span class="segment">PER</span>*IP**TE*3334445549*AP*8284557449*<strong *ngIf="mc.member.contactInformation.email">EM*{{mc.member.contactInformation.email}}</strong>~<br>
+        <span class="segment">N3</span>*<strong>{{mc.member.address.addressLine1}}</strong>~<br>
+        <span class="segment">N4</span>*<strong>{{mc.member.address.addressLine2}}</strong>*WY*82839**CY*56033~<br>
+        <span class="segment">DMG</span>*D8*19841211*M*U~<br>
+        <span class="segment">HLH</span>*T~<br>
+        <span class="segment">HD</span>*021**DEN~<br>
+        <span class="segment">DTP</span>*348*D8*20160101~<br>
+        <span class="segment">REF</span>*1L*556168~<br>
+        <span class="segment">REF</span>*CE*71051IA0020006~<br>
+        <span class="segment">LS</span>*2700~<br>
+        <span class="segment">LX</span>*1~<br>
+        <span class="segment">N1</span>*75*REQUEST SUBMIT TIMESTAMP~<br>
+        <span class="segment">REF</span>*17*20131122143751~<br>
+        <span class="segment">LX</span>*2~<br>
+        <span class="segment">N1</span>*75*APTC AMT~<br>
+        <span class="segment">REF</span>*9V*0.00~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LX</span>*3~<br>
+        <span class="segment">N1</span>*75*PRE AMT 1~<br>
+        <span class="segment">REF</span>*9X*0.00~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LX</span>*4~<br>
+        <span class="segment">N1</span>*75*PRE AMT TOT~<br>
+        <span class="segment">REF</span>*9X*110.77~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LX</span>*5~<br>
+        <span class="segment">N1</span>*75*TOT RES AMT~<br>
+        <span class="segment">REF</span>*9V*110.77~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LX</span>*6~<br>
+        <span class="segment">N1</span>*75*RATING AREA~<br>
+        <span class="segment">REF</span>*9X*R-WY003~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LX</span>*7~<br>
+        <span class="segment">N1</span>*75*SOURCE EXCHANGE ID~<br>
+        <span class="segment">REF</span>*17*WY0~<br>
+        <span class="segment">DTP</span>*007*D8*20160101~<br>
+        <span class="segment">LE</span>*2700~<br>
+        <div *ngFor="let dependant of mc.member.dependants">
+            <span class="segment">INS</span>*N*19*021*EC*A~<br>
+            <span class="segment">REF</span>*0F*<strong>{{mc.member.exchangeId}}</strong>~<br>
+            <span class="segment">REF</span>*17*<strong>{{dependant.exchangeId}}</strong>~<br>
+            <span class="segment">DTP</span>*356*D8*20160101~<br>
+            <span class="segment">NM1</span>*IL*1*[LNAME]*[DepFNAME]****34*[DepSSN]~<br>
+            <span class="segment">N3</span>*test~<br>
+            <span class="segment">N4</span>*test*WY*82839**CY*56033~<br>
+            <span class="segment">DMG</span>*D8*20100202*M~<br>
+            <span class="segment">HLH</span>*N~<br>
+            <span class="segment">HD</span>*021**DEN~<br>
+            <span class="segment">DTP</span>*348*D8*20160101~<br>
+            <span class="segment">REF</span>*1L*556168~<br>
+            <span class="segment">REF</span>*CE*71051IA0020006~<br>
+            <span class="segment">LS</span>*2700~<br>
+            <span class="segment">LX</span>*1~<br>
+            <span class="segment">N1</span>*75*REQUEST SUBMIT TIMESTAMP~<br>
+            <span class="segment">REF</span>*17*20131122143751~<br>
+            <span class="segment">LX</span>*2~<br>
+            <span class="segment">N1</span>*75*PRE AMT 1~<br>
+            <span class="segment">REF</span>*9X*0.00~<br>
+            <span class="segment">DTP</span>*007*D8*20160101~<br>
+            <span class="segment">LX</span>*3~<br>
+            <span class="segment">N1</span>*75*SOURCE EXCHANGE ID~<br>
+            <span class="segment">REF</span>*17*WY0~<br>
+            <span class="segment">DTP</span>*007*D8*20160101~<br>
+            <span class="segment">LE</span>*2700~<br>
+        </div>
+        <span class="segment">SE</span>*76*897745~<br>
+        <span class="segment">GE</span>*1*4461~<br>
+        <span class="segment">IEA</span>*1*000002796~<br>
+        </span>
+    </div>
+
+
+
+
+</div>

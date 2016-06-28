@@ -19,7 +19,8 @@ var EnrollmentComponent = (function () {
     EnrollmentComponent = __decorate([
         core_1.Component({
             selector: 'ex-enrollment',
-            templateUrl: "templates/enrollment.html",
+            moduleId: module.id,
+            templateUrl: "enrollment.component.html",
             directives: [
                 member_component_1.MemberComponent
             ]

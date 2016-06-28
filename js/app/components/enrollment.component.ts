@@ -4,7 +4,8 @@ import { Member } from '../entities/member'
 
 @Component({
     selector : 'ex-enrollment',
-    templateUrl : "templates/enrollment.html",
+    moduleId : module.id,
+    templateUrl : "enrollment.component.html",
     directives : [
         MemberComponent
     ]

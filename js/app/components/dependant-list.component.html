@@ -1,0 +1,67 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" style="display:inline-block">Dependents</h3>
+        <button (click)="showAddNewDependant($event)" title="Add New Dependant" style="display:inline-block; float:right;">+</button>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" *ngIf="showDependantForm==true" (submit)="submitDependant()">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Exchange Id</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="selectedDependant.exchangeId" placeholder="Exchange Assigned Id">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">First name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="selectedDependant.personalInfo.firstName" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Last name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="selectedDependant.personalInfo.lastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email address</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" [(ngModel)]="selectedDependant.contactInformation.email" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address Line 1</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="selectedDependant.address.addressLine1" placeholder="Address Line 1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address Line 2</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="selectedDependant.address.addressLine2" placeholder="Address Line 2">
+                </div>
+            </div>
+
+            <input type="submit" class="btn btn-default" value="submit">
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Exchange Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dependant of dependants" (click)="selectDependant(dependant)">
+                    <td>#</td>
+                    <td>{{dependant.exchangeId}}</td>
+                    <td>{{dependant.personalInfo.firstName}}</td>
+                    <td>{{dependant.personalInfo.lastName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

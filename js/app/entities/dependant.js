@@ -4,14 +4,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var index_1 = require("./index");
-var Member = (function (_super) {
-    __extends(Member, _super);
-    function Member() {
+var index_1 = require('./index');
+var Dependant = (function (_super) {
+    __extends(Dependant, _super);
+    function Dependant() {
         _super.call(this);
-        this.dependants = [];
     }
-    return Member;
+    return Dependant;
 }(index_1.Person));
-exports.Member = Member;
-//# sourceMappingURL=member.js.map
+exports.Dependant = Dependant;
+//# sourceMappingURL=dependant.js.map

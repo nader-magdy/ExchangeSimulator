@@ -9,18 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var DashboardComponent = (function () {
-    function DashboardComponent() {
+var index_1 = require("../entities/index");
+var PersonalInfoComponent = (function () {
+    function PersonalInfoComponent() {
     }
-    DashboardComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', index_1.PersonalInfo)
+    ], PersonalInfoComponent.prototype, "personalInfo", void 0);
+    PersonalInfoComponent = __decorate([
         core_1.Component({
-            selector: 'ex-dashboard',
+            selector: 'ex-personal-info',
             moduleId: module.id,
-            templateUrl: 'dashboard.component.html'
+            templateUrl: 'personal-info.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], DashboardComponent);
-    return DashboardComponent;
+    ], PersonalInfoComponent);
+    return PersonalInfoComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+exports.PersonalInfoComponent = PersonalInfoComponent;
+//# sourceMappingURL=personal-info.component.js.map

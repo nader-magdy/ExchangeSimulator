@@ -1,18 +1,17 @@
 import { Component, EventEmitter } from "@angular/core";
-import { Member } from "../entities/member"
+import { DependentListComponent } from "./dependant-list.component";
+import { PersonalInfoComponent } from "./personal-info.component";
+import { Member } from "../entities/index";
 
 @Component({
     selector : 'ex-member',
-    outputs : ['onMemberChange'],
-    templateUrl : "templates/member.html"
+    moduleId : module.id,
+    templateUrl : "member.component.html",
+    directives : [DependentListComponent, PersonalInfoComponent]
 })
 export class MemberComponent{
     member : Member;
-    onMemberChange : EventEmitter<Member> = new EventEmitter<Member>();
     constructor(){
         this.member = new Member();
-    }
-    onChange(newValue){
-        this.onMemberChange.emit(this.member);
     }
 }

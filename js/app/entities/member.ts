@@ -1,16 +1,10 @@
-import { Address } from "./address"
+import { Person, Dependant } from "./index";
 
-export class Member{
-    firstName : string;
-    lastName : string;
-    middleName: string;
-    exchangeId : string;
-    dateOfBirth : Date;
-    ssn : string;
-    email: string;
-    address: Address;
+export class Member extends Person{
+    dependants : Dependant[];
 
     constructor(){
-        this.address = new Address();
+        super();
+        this.dependants = [];
     }
 }
