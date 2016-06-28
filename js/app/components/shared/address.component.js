@@ -9,27 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var member_component_1 = require('./member.component');
-var dependant_list_component_1 = require('./dependant-list.component');
-var EnrollmentComponent = (function () {
-    function EnrollmentComponent() {
+var index_1 = require('../../entities/index');
+var AddressComponent = (function () {
+    function AddressComponent() {
     }
-    EnrollmentComponent.prototype.onSelectedMemberChange = function (member) {
-        this.member = member;
+    AddressComponent.prototype.selectState = function (state) {
+        this.address.state = state;
+        return false;
     };
-    EnrollmentComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', index_1.Address)
+    ], AddressComponent.prototype, "address", void 0);
+    AddressComponent = __decorate([
         core_1.Component({
-            selector: 'ex-enrollment',
+            selector: 'ex-address',
             moduleId: module.id,
-            templateUrl: "enrollment.component.html",
-            directives: [
-                member_component_1.MemberComponent,
-                dependant_list_component_1.DependentListComponent
-            ]
+            templateUrl: 'address.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], EnrollmentComponent);
-    return EnrollmentComponent;
+    ], AddressComponent);
+    return AddressComponent;
 }());
-exports.EnrollmentComponent = EnrollmentComponent;
-//# sourceMappingURL=enrollment.component.js.map
+exports.AddressComponent = AddressComponent;
+//# sourceMappingURL=address.component.js.map

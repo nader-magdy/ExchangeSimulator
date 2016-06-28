@@ -9,27 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var member_component_1 = require('./member.component');
-var dependant_list_component_1 = require('./dependant-list.component');
-var EnrollmentComponent = (function () {
-    function EnrollmentComponent() {
+var index_1 = require('../../entities/index');
+var ContactInfoComponent = (function () {
+    function ContactInfoComponent() {
     }
-    EnrollmentComponent.prototype.onSelectedMemberChange = function (member) {
-        this.member = member;
-    };
-    EnrollmentComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', index_1.ContactInformation)
+    ], ContactInfoComponent.prototype, "contactInfo", void 0);
+    ContactInfoComponent = __decorate([
         core_1.Component({
-            selector: 'ex-enrollment',
+            selector: 'ex-contact-info',
             moduleId: module.id,
-            templateUrl: "enrollment.component.html",
-            directives: [
-                member_component_1.MemberComponent,
-                dependant_list_component_1.DependentListComponent
-            ]
+            templateUrl: 'contact-info.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], EnrollmentComponent);
-    return EnrollmentComponent;
+    ], ContactInfoComponent);
+    return ContactInfoComponent;
 }());
-exports.EnrollmentComponent = EnrollmentComponent;
-//# sourceMappingURL=enrollment.component.js.map
+exports.ContactInfoComponent = ContactInfoComponent;
+//# sourceMappingURL=contact-info.component.js.map

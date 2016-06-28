@@ -8,4 +8,5 @@ __export(require('./address'));
 __export(require('./personalInfo'));
 __export(require('./dependant'));
 __export(require('./contactInformation'));
+__export(require('./healthCoverage'));
 //# sourceMappingURL=index.js.map

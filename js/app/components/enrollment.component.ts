@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { MemberComponent } from './member.component'
+import { DependentListComponent } from './dependant-list.component'
 import { Member } from '../entities/member'
 
 @Component({
@@ -7,7 +8,8 @@ import { Member } from '../entities/member'
     moduleId : module.id,
     templateUrl : "enrollment.component.html",
     directives : [
-        MemberComponent
+        MemberComponent,
+        DependentListComponent
     ]
 })
 export class EnrollmentComponent{

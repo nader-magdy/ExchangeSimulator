@@ -1,10 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Dependant } from '../entities/index'
+import { DependantComponent } from './dependant.component'
 
 @Component({
     selector: 'ex-dependant-list',
     moduleId: module.id,
-    templateUrl: 'dependant-list.component.html'
+    templateUrl: 'dependant-list.component.html',
+    directives:[
+        DependantComponent
+    ]
 })
 export class DependentListComponent {
     @Input() dependants: Dependant[];

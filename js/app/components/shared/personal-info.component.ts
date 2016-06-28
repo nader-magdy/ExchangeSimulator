@@ -1,5 +1,5 @@
 import {Component, Input} from "@angular/core";
-import {PersonalInfo} from "../entities/index";
+import {PersonalInfo} from "../../entities/index";
 
 @Component({
     selector : 'ex-personal-info',

@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var index_1 = require('../entities/index');
+var dependant_component_1 = require('./dependant.component');
 var DependentListComponent = (function () {
     function DependentListComponent() {
         this.showDependantForm = false;
@@ -44,7 +45,10 @@ var DependentListComponent = (function () {
         core_1.Component({
             selector: 'ex-dependant-list',
             moduleId: module.id,
-            templateUrl: 'dependant-list.component.html'
+            templateUrl: 'dependant-list.component.html',
+            directives: [
+                dependant_component_1.DependantComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], DependentListComponent);

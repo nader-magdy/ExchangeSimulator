@@ -1,21 +1,16 @@
-<ex-personal-info [personalInfo]="member.personalInfo" ></ex-personal-info>
-<form class="form" role="form">
-  <div class="form-group">
-    <label>Exchange Id</label>
-    <input type="text" class="form-control" [(ngModel)]="member.exchangeId" placeholder="Exchange Assigned Id">
-  </div>
-  <div class="form-group">
-    <label>Email address</label>
-    <input type="email" class="form-control" [(ngModel)]="member.contactInformation.email" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label>Address Line 1</label>
-    <input type="text" class="form-control" [(ngModel)]="member.address.addressLine1" placeholder="Address Line 1">
-  </div>
 
+<form class="form-horizontal" role="form">
   <div class="form-group">
-    <label>Address Line 2</label>
-    <input type="text" class="form-control" [(ngModel)]="member.address.addressLine2" placeholder="Address Line 2">
+    <label class="col-sm-3">Exchange Id</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="member.exchangeId" placeholder="Exchange Assigned Id">
+    </div>
   </div>
+  <ex-personal-info [personalInfo]="member.personalInfo"></ex-personal-info>
+
+  <ex-address [address]="member.address"></ex-address>
+
+  <ex-contact-info [contactInfo]="member.contactInformation" ></ex-contact-info>
+
+  <ex-health-coverage [healthCoverage]="member.healthCoverage"></ex-health-coverage>
 </form>
-<ex-dependant-list [dependants]="member.dependants"></ex-dependant-list>

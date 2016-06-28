@@ -1,0 +1,24 @@
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-3">Exchange Id</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" [(ngModel)]="dependant.exchangeId" placeholder="Exchange Assigned Id">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ex-personal-info [personalInfo]="dependant.personalInfo"></ex-personal-info>
+        </div>
+        <div class="col-md-6">
+            <ex-address [address]="dependant.address"></ex-address>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ex-contact-info [contactInfo]="dependant.contactInformation"></ex-contact-info>
+        </div>
+        <div class="col-md-6">
+            <ex-health-coverage [healthCoverage]="dependant.healthCoverage"></ex-health-coverage>
+        </div>
+    </div>
+</form>
