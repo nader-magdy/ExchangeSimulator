@@ -20,6 +20,7 @@ var DependentListComponent = (function () {
         this.addMode = true;
         this.selectedDependant = new index_1.Dependant();
         this.showDependantForm = true;
+        return false;
     };
     DependentListComponent.prototype.submitDependant = function () {
         if (this.selectedDependant) {
@@ -36,6 +37,12 @@ var DependentListComponent = (function () {
         this.addMode = false;
         this.selectedDependant = dependant;
         this.showDependantForm = true;
+        return false;
+    };
+    DependentListComponent.prototype.removeDependant = function (dependant) {
+        var i = this.dependants.indexOf(dependant);
+        this.dependants.splice(i, 1);
+        return false;
     };
     __decorate([
         core_1.Input(), 

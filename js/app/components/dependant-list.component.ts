@@ -19,6 +19,7 @@ export class DependentListComponent {
         this.addMode = true;
         this.selectedDependant = new Dependant();
         this.showDependantForm = true;
+        return false;
     }
     submitDependant() {
         if (this.selectedDependant) {
@@ -34,5 +35,11 @@ export class DependentListComponent {
         this.addMode = false;
         this.selectedDependant = dependant;
         this.showDependantForm = true;
+        return false;
+    }
+    removeDependant(dependant: Dependant) {
+        let i = this.dependants.indexOf(dependant);
+        this.dependants.splice(i, 1);
+        return false;
     }
 }

@@ -1,24 +1,32 @@
-<form class="form-horizontal" role="form">
-    <div class="form-group">
-        <label class="col-sm-3">Exchange Id</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" [(ngModel)]="dependant.exchangeId" placeholder="Exchange Assigned Id">
-        </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" style="display:inline-block;">Member Details</h3>
+        <a href="#" title="fill with random data" (click)="generateRandomData()" style="display:inline-block; float:right;"><i class="fa fa-file-text"></i></a>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <ex-personal-info [personalInfo]="dependant.personalInfo"></ex-personal-info>
-        </div>
-        <div class="col-md-6">
-            <ex-address [address]="dependant.address"></ex-address>
-        </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3">Exchange Id</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" [(ngModel)]="dependant.exchangeId" placeholder="Exchange Assigned Id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <ex-personal-info [personalInfo]="dependant.personalInfo"></ex-personal-info>
+                </div>
+                <div class="col-md-6">
+                    <ex-address [address]="dependant.address"></ex-address>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <ex-contact-info [contactInfo]="dependant.contactInformation"></ex-contact-info>
+                </div>
+                <div class="col-md-6">
+                    <ex-health-coverage [healthCoverage]="dependant.healthCoverage"></ex-health-coverage>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <ex-contact-info [contactInfo]="dependant.contactInformation"></ex-contact-info>
-        </div>
-        <div class="col-md-6">
-            <ex-health-coverage [healthCoverage]="dependant.healthCoverage"></ex-health-coverage>
-        </div>
-    </div>
-</form>
+</div>

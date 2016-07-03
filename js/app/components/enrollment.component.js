@@ -11,11 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var member_component_1 = require('./member.component');
 var dependant_list_component_1 = require('./dependant-list.component');
+var random_service_1 = require('../services/random.service');
 var EnrollmentComponent = (function () {
-    function EnrollmentComponent() {
+    function EnrollmentComponent(randomService) {
+        this.randomService = randomService;
     }
-    EnrollmentComponent.prototype.onSelectedMemberChange = function (member) {
-        this.member = member;
+    EnrollmentComponent.prototype.generateRandomData = function (person) {
+        person.exchangeId = this.randomService.getExchangeId();
+        this.randomService.randomizePerson(person);
+        return false;
     };
     EnrollmentComponent = __decorate([
         core_1.Component({
@@ -25,9 +29,12 @@ var EnrollmentComponent = (function () {
             directives: [
                 member_component_1.MemberComponent,
                 dependant_list_component_1.DependentListComponent
+            ],
+            providers: [
+                random_service_1.RandomService
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [random_service_1.RandomService])
     ], EnrollmentComponent);
     return EnrollmentComponent;
 }());

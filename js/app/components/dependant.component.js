@@ -14,9 +14,16 @@ var personal_info_component_1 = require("./shared/personal-info.component");
 var contact_info_component_1 = require("./shared/contact-info.component");
 var address_component_1 = require('./shared/address.component');
 var health_coverage_component_1 = require('./shared/health-coverage.component');
+var random_service_1 = require('../services/random.service');
 var DependantComponent = (function () {
-    function DependantComponent() {
+    function DependantComponent(randomService) {
+        this.randomService = randomService;
     }
+    DependantComponent.prototype.generateRandomData = function () {
+        this.dependant.exchangeId = this.randomService.getExchangeId();
+        this.randomService.randomizePerson(this.dependant);
+        return false;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', index_1.Dependant)
@@ -31,9 +38,12 @@ var DependantComponent = (function () {
                 address_component_1.AddressComponent,
                 contact_info_component_1.ContactInfoComponent,
                 health_coverage_component_1.HealthCoverageComponent
+            ],
+            providers: [
+                random_service_1.RandomService
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [random_service_1.RandomService])
     ], DependantComponent);
     return DependantComponent;
 }());

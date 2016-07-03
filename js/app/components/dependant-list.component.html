@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title" style="display:inline-block">Dependents</h3>
-        <button (click)="showAddNewDependant($event)" title="Add New Dependant" style="display:inline-block; float:right;">+</button>
+        <a href="#" (click)="showAddNewDependant($event)" title="Add New Dependant" style="display:inline-block; float:right;" ><i class="fa fa-plus"></i></a>
     </div>
     <div class="panel-body">
         <form class="form-horizontal" role="form" *ngIf="showDependantForm==true" (submit)="submitDependant()">
@@ -17,16 +17,21 @@
                     <th>Last Name</th>
                     <th>SSN</th>
                     <th>Effective Date</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let dependant of dependants; let i = index" (click)="selectDependant(dependant)">
+                <tr *ngFor="let dependant of dependants; let i = index">
                     <td>{{i+1}}</td>
                     <td>{{dependant.exchangeId}}</td>
                     <td>{{dependant.personalInfo.firstName}}</td>
                     <td>{{dependant.personalInfo.lastName}}</td>
                     <td>{{dependant.personalInfo.ssn}}</td>
                     <td>{{dependant.healthCoverage.effectiveDate}}</td>
+                    <td>
+                        <a href="#" (click)="selectDependant(dependant)" title="Select Dependant" style="display:inline-block;" ><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="#" (click)="removeDependant(dependant)" title="Remove Dependant" style="display:inline-block;" ><i class="fa fa-trash"></i></a>
+                    </td>
                 </tr>
             </tbody>
         </table>

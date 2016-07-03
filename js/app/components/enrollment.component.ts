@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core'
 import { MemberComponent } from './member.component'
 import { DependentListComponent } from './dependant-list.component'
-import { Member } from '../entities/member'
+import { Person } from '../entities/person'
+import { RandomService } from '../services/random.service';
 
 @Component({
     selector : 'ex-enrollment',
@@ -10,12 +11,20 @@ import { Member } from '../entities/member'
     directives : [
         MemberComponent,
         DependentListComponent
+    ],
+    providers : [
+        RandomService
     ]
 })
 export class EnrollmentComponent{
-    member: Member;
-    onSelectedMemberChange(member : Member){
-        this.member = member;
+
+    constructor(private randomService: RandomService){
+
+    }
+    generateRandomData(person : Person){
+        person.exchangeId = this.randomService.getExchangeId();
+        this.randomService.randomizePerson(person);
+        return false;
     }
 
 }
