@@ -1,5 +1,5 @@
 # ExchangeSimulator
-POC for creating a montor and X12 834 format generator
+POC for creating a monitor and X12 834 format generator
 download the or clone
 
 ## Prerequisites
