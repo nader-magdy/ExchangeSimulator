@@ -4,6 +4,7 @@ function __export(m) {
 }
 __export(require('./dashboard.component'));
 __export(require('./enrollment.component'));
+__export(require('./cancellation.component'));
 __export(require('./member.component'));
 __export(require('./dependant-list.component'));
 //# sourceMappingURL=index.js.map

@@ -32,8 +32,9 @@
                 <span class="segment">GS</span>*BE*WY0*47731WY0030005*20131122*1600*4461*X*005010X220A1~<br>
                 <span class="segment">ST</span>*834*897745*005010X220A1~<br>
                 <span class="segment">BGN</span>*00*897745*20131122*143753*ET***2~<br>
-                <span class="segment">QTY</span>*TO*3~<br>
-                <span class="segment">QTY</span>*DT*2~<br>
+                <span class="segment">QTY</span>*TO*<strong>{{mc.member.dependants.length + 1}}</strong>~<br>
+                <span class="segment">QTY</span>*ET*1~<br>
+                <span class="segment">QTY</span>*DT*<strong>{{mc.member.dependants.length}}</strong>~<br>
                 <span class="segment">N1</span>*P5*<strong>{{mc.member.personalInfo.firstName}}</strong> <strong>{{mc.member.personalInfo.lastName}}</strong>*FI*<strong>{{mc.member.personalInfo.ssn}}</strong>~<br>
                 <span class="segment">N1</span>*IN*NOT AVAILABLE*FI*123456789~<br>
                 <span class="segment">INS</span>*Y*18*021*EC*A***AC~<br>

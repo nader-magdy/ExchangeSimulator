@@ -123,8 +123,11 @@
                     <li [class]="(routeName) ? '' : 'active'">
                         <a [routerLink]="['Dashboard']"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-                    <li [class]="routeName == 'Enrollment' ? 'active' : ''">
+                    <li [class.active]="routeName == 'Enrollment'">
                         <a [routerLink]="['Enrollment']"><i class="fa fa-fw fa-sign-in"></i> New Enrollment</a>
+                    </li>
+                     <li [class.active]="routeName == 'Cancellation'">
+                        <a [routerLink]="['Cancellation']"><i class="fa fa-fw fa-sign-out"></i> Cancel/Term</a>
                     </li>
                 </ul>
             </div>
