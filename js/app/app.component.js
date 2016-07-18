@@ -31,6 +31,7 @@ var AppComponent = (function () {
         }),
         router_deprecated_1.RouteConfig([
             { path: '/', name: 'Dashboard', component: index_1.DashboardComponent },
+            { path: '/members', name: 'Members', component: index_1.MemberListComponent },
             { path: '/enrollment', name: 'Enrollment', component: index_1.EnrollmentComponent },
             { path: '/cancellation', name: 'Cancellation', component: index_1.CancellationComponent }
         ]), 

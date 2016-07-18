@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { Member } from './entities/';
-import { DashboardComponent, EnrollmentComponent, CancellationComponent } from './components/index';
+import { DashboardComponent, MemberListComponent, EnrollmentComponent, CancellationComponent } from './components/index';
 @Component({
   selector: 'ex-app',
   templateUrl: 'main.html',
@@ -14,6 +14,7 @@ import { DashboardComponent, EnrollmentComponent, CancellationComponent } from '
 })
 @RouteConfig([
   { path: '/',    name: 'Dashboard',    component: DashboardComponent },
+  { path: '/members',    name: 'Members',    component: MemberListComponent },
   { path: '/enrollment',    name: 'Enrollment',    component: EnrollmentComponent },
   { path: '/cancellation',    name: 'Cancellation',    component: CancellationComponent }
 ])
