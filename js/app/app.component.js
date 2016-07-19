@@ -9,33 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
-var index_1 = require('./components/index');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent(router) {
-        var _this = this;
-        router.subscribe(function (result) {
-            _this.routeName = result.instruction.routeName;
-        });
+    function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'ex-app',
             templateUrl: 'main.html',
-            directives: [
-                router_deprecated_1.ROUTER_DIRECTIVES
-            ],
-            providers: [
-                router_deprecated_1.ROUTER_PROVIDERS
-            ]
-        }),
-        router_deprecated_1.RouteConfig([
-            { path: '/', name: 'Dashboard', component: index_1.DashboardComponent },
-            { path: '/members', name: 'Members', component: index_1.MemberListComponent },
-            { path: '/enrollment', name: 'Enrollment', component: index_1.EnrollmentComponent },
-            { path: '/cancellation', name: 'Cancellation', component: index_1.CancellationComponent }
-        ]), 
-        __metadata('design:paramtypes', [router_deprecated_1.Router])
+            directives: [router_1.ROUTER_DIRECTIVES]
+        }), 
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());

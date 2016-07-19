@@ -121,16 +121,16 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li [class]="(routeName) ? '' : 'active'">
-                        <a [routerLink]="['Dashboard']"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a [routerLink]="['/dashboard']"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li [class.active]="routeName == 'Members'">
-                        <a [routerLink]="['Members']"><i class="fa fa-fw fa-sign-in"></i> Members</a>
+                        <a [routerLink]="['/members']"><i class="fa fa-fw fa-sign-in"></i> Members</a>
                     </li>
                     <li [class.active]="routeName == 'Enrollment'">
-                        <a [routerLink]="['Enrollment']"><i class="fa fa-fw fa-sign-in"></i> New Enrollment</a>
+                        <a [routerLink]="['/enrollment']"><i class="fa fa-fw fa-sign-in"></i> New Enrollment</a>
                     </li>
                      <li [class.active]="routeName == 'Cancellation'">
-                        <a [routerLink]="['Cancellation']"><i class="fa fa-fw fa-sign-out"></i> Cancel/Term</a>
+                        <a [routerLink]="['/cancellation']"><i class="fa fa-fw fa-sign-out"></i> Cancel/Term</a>
                     </li>
                 </ul>
             </div>
