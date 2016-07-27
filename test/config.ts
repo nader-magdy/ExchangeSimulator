@@ -1,5 +1,5 @@
-"use strict";
-exports.config = {
+import { Config } from 'protractor';
+export let config: Config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['./tests/*.spec.js'],
     framework: 'jasmine',
@@ -7,5 +7,4 @@ exports.config = {
         browserName: 'chrome'
     },
     useAllAngular2AppRoots: true
-};
-//# sourceMappingURL=config.js.map
+}
