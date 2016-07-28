@@ -8,8 +8,8 @@ export class BasePage {
         browser.get(`${this.baseUrl}/${this.pageUrl}`);
     }
 
-
     maximizeWindow() {
         browser.driver.manage().window().maximize();
     }
+
 }
