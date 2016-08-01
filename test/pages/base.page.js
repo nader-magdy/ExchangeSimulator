@@ -9,6 +9,12 @@ var BasePage = (function () {
     BasePage.prototype.maximizeWindow = function () {
         globals_1.browser.driver.manage().window().maximize();
     };
+    BasePage.prototype.Title = function () {
+        return globals_1.browser.getTitle();
+    };
+    BasePage.prototype.ImplicitWait = function () {
+        globals_1.browser.driver.manage().implicitWait();
+    };
     return BasePage;
 }());
 exports.BasePage = BasePage;

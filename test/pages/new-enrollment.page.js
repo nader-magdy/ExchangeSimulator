@@ -11,12 +11,17 @@ var NewEnrollmentPage = (function (_super) {
     function NewEnrollmentPage() {
         _super.call(this, 'enrollment');
         this.exchangeId = globals_1.element(globals_1.by.css("ex-member .exchange-id"));
+        this.brand = globals_1.element(globals_1.by.css(".navbar-brand"));
+        this.h1HeaderTxt = globals_1.element(globals_1.by.css("#page-wrapper > div > ex-enrollment > div:nth-child(1) > div > h1"));
     }
     NewEnrollmentPage.prototype.getH1HeaderText = function () {
-        return globals_1.element(globals_1.by.css("#page-wrapper > div > ex-enrollment > div:nth-child(1) > div > h1")).getText(); // element(by.css('h1.header')).getText();
+        return this.h1HeaderTxt.getText(); // element(by.css('h1.header')).getText();
     };
     NewEnrollmentPage.prototype.fillWithRandomData = function () {
         return globals_1.element(globals_1.by.css(".fa-file-text")).click();
+    };
+    NewEnrollmentPage.prototype.isBrandVisible = function () {
+        return this.brand.isDisplayed();
     };
     return NewEnrollmentPage;
 }(base_page_1.BasePage));

@@ -22,17 +22,20 @@ describe("check that header h1 text is member enrollment  ", () => {
 
 describe("check that fillWithRandomData button worked well  ", () => {
     it("fillWithRandomData button", () => {
-        console.log("enter second test case.");
         enrollmentPage.fillWithRandomData().then(() => {
-            console.log("button clicked");
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
-                console.log(value);
                 expect(value).toBeTruthy();
             });
         });
 
 
     });
+});
+
+describe("check that brand displayed  ", () => {
+    it("brand is a logo  ", () => {
+        expect(enrollmentPage.isBrandVisible).toBeTruthy();
+        });
 });
 
 

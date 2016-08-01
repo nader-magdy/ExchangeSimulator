@@ -18,14 +18,16 @@ describe("check that header h1 text is member enrollment  ", function () {
 });
 describe("check that fillWithRandomData button worked well  ", function () {
     it("fillWithRandomData button", function () {
-        console.log("enter second test case.");
         enrollmentPage.fillWithRandomData().then(function () {
-            console.log("button clicked");
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
-                console.log(value);
                 expect(value).toBeTruthy();
             });
         });
+    });
+});
+describe("check that brand displayed  ", function () {
+    it("brand is a logo  ", function () {
+        expect(enrollmentPage.isBrandVisible).toBeTruthy();
     });
 });
 afterEach(function () {
