@@ -4,9 +4,10 @@ import {ElementFinder} from 'protractor'
 
 export class NewEnrollmentPage extends BasePage {
     
-       exchangeId: ElementFinder = element(by.css("ex-member .exchange-id"));
-       brand:  ElementFinder = element(by.css(".navbar-brand"));
        h1HeaderTxt : ElementFinder=element(by.css("#page-wrapper > div > ex-enrollment > div:nth-child(1) > div > h1"));
+       exchangeId = element(by.css("ex-member .exchange-id"));
+       brand = element(by.css(".navbar-brand"));
+       
 
     constructor() {
         super('enrollment');
@@ -14,7 +15,7 @@ export class NewEnrollmentPage extends BasePage {
      
      
     getH1HeaderText(): Promise<any> {
-        return this.h1HeaderTxt.getText();// element(by.css('h1.header')).getText();
+        return this.h1HeaderTxt.getText();
     }
 
     fillWithRandomData() {
