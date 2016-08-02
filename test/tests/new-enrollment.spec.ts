@@ -22,12 +22,17 @@ describe("check that header h1 text is member enrollment  ", () => {
 
 describe("check that fillWithRandomData button worked well  ", () => {
     it("fillWithRandomData button", () => {
-        enrollmentPage.fillWithRandomData().then(() => {
+            enrollmentPage.fillWithRandomData().then(() => {
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
+            enrollmentPage.lastName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+             enrollmentPage.firstName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
         });
-
 
     });
 });

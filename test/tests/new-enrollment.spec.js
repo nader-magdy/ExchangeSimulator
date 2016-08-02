@@ -22,6 +22,12 @@ describe("check that fillWithRandomData button worked well  ", function () {
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
+            enrollmentPage.lastName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+            enrollmentPage.firstName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
         });
     });
 });

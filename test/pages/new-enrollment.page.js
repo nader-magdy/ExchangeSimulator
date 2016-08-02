@@ -12,6 +12,8 @@ var NewEnrollmentPage = (function (_super) {
         _super.call(this, 'enrollment');
         this.h1HeaderTxt = globals_1.element(globals_1.by.css("#page-wrapper > div > ex-enrollment > div:nth-child(1) > div > h1"));
         this.exchangeId = globals_1.element(globals_1.by.css("ex-member .exchange-id"));
+        this.lastName = globals_1.element(globals_1.by.css("ex-member .lastname"));
+        this.firstName = globals_1.element(globals_1.by.css("ex-member .firstName"));
         this.brand = globals_1.element(globals_1.by.css(".navbar-brand"));
     }
     NewEnrollmentPage.prototype.getH1HeaderText = function () {

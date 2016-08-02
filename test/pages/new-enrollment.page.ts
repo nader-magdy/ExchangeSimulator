@@ -6,6 +6,8 @@ export class NewEnrollmentPage extends BasePage {
     
        h1HeaderTxt : ElementFinder=element(by.css("#page-wrapper > div > ex-enrollment > div:nth-child(1) > div > h1"));
        exchangeId = element(by.css("ex-member .exchange-id"));
+       lastName=element(by.css("ex-member .lastname"));
+       firstName=element(by.css("ex-member .firstName"));
        brand = element(by.css(".navbar-brand"));
        
 
@@ -27,4 +29,6 @@ export class NewEnrollmentPage extends BasePage {
     isBrandVisible(){
         return this.brand.isDisplayed();            
     }
+
+    
 }
