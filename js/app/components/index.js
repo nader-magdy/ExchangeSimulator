@@ -8,4 +8,6 @@ __export(require('./cancellation.component'));
 __export(require('./member.component'));
 __export(require('./dependant-list.component'));
 __export(require('./member-list.component'));
+__export(require('./members-page.component'));
+__export(require('./member-add.component'));
 //# sourceMappingURL=index.js.map

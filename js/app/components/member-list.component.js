@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var index_1 = require('../services/index');
 var index_2 = require('./index');
+var router_1 = require('@angular/router');
 var MemberListComponent = (function () {
     function MemberListComponent(memberService, randomService) {
         this.memberService = memberService;
@@ -35,7 +36,7 @@ var MemberListComponent = (function () {
             moduleId: module.id,
             selector: 'ex-meber-list',
             templateUrl: 'member-list.component.html',
-            directives: [index_2.MemberComponent, index_2.DependentListComponent],
+            directives: [index_2.MemberComponent, index_2.DependentListComponent, router_1.ROUTER_DIRECTIVES],
             providers: [index_1.MemberService, index_1.RandomService]
         }), 
         __metadata('design:paramtypes', [index_1.MemberService, index_1.RandomService])
