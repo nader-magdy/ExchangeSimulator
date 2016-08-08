@@ -5,11 +5,11 @@ import { DashboardComponent, MemberListComponent, EnrollmentComponent, Cancellat
 @Component({
   selector: 'ex-app',
   templateUrl: 'main.html',
-  directives : [ ROUTER_DIRECTIVES ]
+  directives: [ROUTER_DIRECTIVES]
 })
 export class AppComponent {
-  routeName : string;
+  routeName: string;
 
-  constructor(){
+  constructor() {
   }
- }
+}
