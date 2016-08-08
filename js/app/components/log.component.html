@@ -1,0 +1,21 @@
+﻿
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Class</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let entry of entries">
+            <td>{{entry.Id}}</td>
+            <td>{{entry.Date}}</td>
+            <td>{{entry.Type}}</td>
+            <td>{{entry.Class}}</td>
+            <td>{{entry.Message}}</td>
+        </tr>
+    </tbody>
+</table>

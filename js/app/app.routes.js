@@ -12,7 +12,8 @@ var routes = [
         ]
     },
     { path: 'enrollment', component: index_1.EnrollmentComponent },
-    { path: 'cancellation', component: index_1.CancellationComponent }
+    { path: 'cancellation', component: index_1.CancellationComponent },
+    { path: 'logger', component: index_1.LogComponent }
 ];
 exports.appRouterProviders = [
     router_1.provideRouter(routes)

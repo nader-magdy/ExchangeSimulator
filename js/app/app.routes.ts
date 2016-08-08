@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { DashboardComponent, MemberListComponent, EnrollmentComponent, CancellationComponent, MembersPageComponent ,MemberAddComponent} from './components/index';
+import { DashboardComponent, MemberListComponent, EnrollmentComponent, CancellationComponent, MembersPageComponent ,MemberAddComponent, LogComponent} from './components/index';
 
 const routes: RouterConfig = [
     { path: '', component: DashboardComponent },
@@ -13,7 +13,8 @@ const routes: RouterConfig = [
         ]
     },
     { path: 'enrollment', component: EnrollmentComponent },
-    { path: 'cancellation', component: CancellationComponent }
+    { path: 'cancellation', component: CancellationComponent },
+    { path: 'logger', component: LogComponent }
 ];
 
 export const appRouterProviders = [

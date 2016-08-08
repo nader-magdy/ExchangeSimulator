@@ -9,4 +9,5 @@ __export(require('./personalInfo'));
 __export(require('./dependant'));
 __export(require('./contactInformation'));
 __export(require('./healthCoverage'));
+__export(require('./logEntity'));
 //# sourceMappingURL=index.js.map
