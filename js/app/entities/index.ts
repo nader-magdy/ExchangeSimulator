@@ -5,3 +5,4 @@ export *  from './personalInfo';
 export *  from './dependant';
 export *  from './contactInformation';
 export *  from './healthCoverage';
+export *  from './logEntity';

@@ -4,4 +4,5 @@ function __export(m) {
 }
 __export(require('./random.service'));
 __export(require('./member.service'));
+__export(require('./socket.service'));
 //# sourceMappingURL=index.js.map

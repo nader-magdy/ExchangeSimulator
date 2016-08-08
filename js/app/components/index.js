@@ -10,4 +10,5 @@ __export(require('./dependant-list.component'));
 __export(require('./member-list.component'));
 __export(require('./members-page.component'));
 __export(require('./member-add.component'));
+__export(require('./log.component'));
 //# sourceMappingURL=index.js.map
