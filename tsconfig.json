@@ -14,5 +14,8 @@
     "node_modules",
     "typings/globals",
     "asyncAwait"
-  ]
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true //Allows loaders to be chained to awesome-typescript-loader.
+  }
 }
