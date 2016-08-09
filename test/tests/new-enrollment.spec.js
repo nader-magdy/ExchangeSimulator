@@ -28,6 +28,22 @@ describe("check that fillWithRandomData button worked well  ", function () {
             enrollmentPage.firstName.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
+            enrollmentPage.middleName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+            enrollmentPage.SSN.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+        });
+    });
+});
+describe("Fill Contact Address", function () {
+    it("Fill Contact Address", function () {
+        enrollmentPage.fillWithRandomData().then(function () {
+            enrollmentPage.fillAddressContact();
+            enrollmentPage.Address1.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
         });
     });
 });

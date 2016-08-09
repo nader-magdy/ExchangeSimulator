@@ -12,18 +12,17 @@ export class BasePage {
     maximizeWindow() {
         browser.driver.manage().window().maximize();
     }
-    Title(): Promise<any>{
+    Title(): Promise<any> {
         return browser.getTitle();
     }
-    ImplicitWait(){
+    ImplicitWait() {
         browser.driver.manage().implicitWait();
     }
-  
     /**
-     * return true if the web element has been filled otherwise return false
-     *
-     * @param {ElementFinder} ele element check 
-     */
+* Usage: selectDropdownByText (selector, item)
+* selector : select element
+* item : option(s) in the dropdown.
+*/
    
 
 }

@@ -22,25 +22,45 @@ describe("check that header h1 text is member enrollment  ", () => {
 
 describe("check that fillWithRandomData button worked well  ", () => {
     it("fillWithRandomData button", () => {
-            enrollmentPage.fillWithRandomData().then(() => {
+        enrollmentPage.fillWithRandomData().then(() => {
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
             enrollmentPage.lastName.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
-             enrollmentPage.firstName.getAttribute('value').then(function (value) {
+            enrollmentPage.firstName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+
+            enrollmentPage.middleName.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+
+            enrollmentPage.SSN.getAttribute('value').then(function (value) {
+                expect(value).toBeTruthy();
+            });
+
+        });
+
+    });
+});
+
+describe("Fill Contact Address", () => {
+    it("Fill Contact Address", () => {
+        enrollmentPage.fillWithRandomData().then(() => {
+            enrollmentPage.fillAddressContact();
+            enrollmentPage.Address1.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
         });
-
     });
 });
 
 describe("check that brand displayed  ", () => {
     it("brand is a logo  ", () => {
         expect(enrollmentPage.isBrandVisible).toBeTruthy();
-        });
+    });
 });
 
 
