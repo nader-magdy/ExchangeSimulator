@@ -27,4 +27,5 @@ export class NewEnrollmentPage extends BasePage {
     isBrandVisible(){
         return this.brand.isDisplayed();            
     }
+    
 }
