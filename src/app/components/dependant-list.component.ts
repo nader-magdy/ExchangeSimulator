@@ -5,7 +5,8 @@ import { DependantComponent } from './dependant.component'
 @Component({
     selector: 'ex-dependant-list',
     moduleId: module.id,
-    directives:[
+    template: require("./dependant-list.component.html"),
+    directives: [
         DependantComponent
     ]
 })

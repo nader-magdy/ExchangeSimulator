@@ -5,7 +5,7 @@ import { LogEntity } from '../entities/index';
 @Component({
     selector: 'log',
     moduleId: module.id,
-    template:require("./log.component.html"),
+    template: require("./log.component.html"),
     providers: [SocketService]
 })
 export class LogComponent implements OnInit {

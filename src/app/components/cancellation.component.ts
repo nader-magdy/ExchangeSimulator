@@ -5,6 +5,7 @@ import { RandomService } from '../services/random.service';
 
 @Component({
     selector: 'ex-cancellation',
+    template: require("./cancellation.component.html"),
     moduleId: module.id,
     directives: [
         MemberComponent

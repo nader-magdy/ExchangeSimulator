@@ -4,6 +4,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component({
     selector: 'ex-member-add',
     moduleId: module.id,
+    template: require("./member-add.component.html"),
     directives: [
         MemberComponent,
         ROUTER_DIRECTIVES

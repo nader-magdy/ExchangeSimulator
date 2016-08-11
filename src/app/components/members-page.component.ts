@@ -5,6 +5,7 @@ import { MemberComponent, DependentListComponent } from './index';
 @Component({
     selector: 'ex-members-page',
     moduleId: module.id,
+    template: require("./members-page.component.html"),
     directives: [MemberComponent, DependentListComponent, ROUTER_DIRECTIVES],
 })
 export class MembersPageComponent {
