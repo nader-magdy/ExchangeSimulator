@@ -4,7 +4,6 @@ import { Address } from '../../entities/index';
 @Component({
     selector: 'ex-address',
     moduleId : module.id,
-    templateUrl : 'address.component.html'
 })
 export class AddressComponent{
     @Input() address : Address;

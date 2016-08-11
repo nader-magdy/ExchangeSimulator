@@ -7,7 +7,6 @@ import { RandomService } from '../services/random.service';
 @Component({
     selector : 'ex-enrollment',
     moduleId : module.id,
-    templateUrl : "enrollment.component.html",
     directives : [
         MemberComponent,
         DependentListComponent

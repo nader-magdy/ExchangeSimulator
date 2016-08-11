@@ -6,7 +6,6 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'ex-meber-list',
-    templateUrl: 'member-list.component.html',
     directives : [MemberComponent, DependentListComponent,ROUTER_DIRECTIVES],
     providers:[MemberService, RandomService]
 })
