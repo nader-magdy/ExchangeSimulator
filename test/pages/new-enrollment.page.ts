@@ -1,6 +1,6 @@
 import { BasePage } from './base.page'
-import {browser, element, by} from 'protractor/globals';
-import {ElementFinder} from 'protractor'
+import { browser, element, by } from 'protractor/globals';
+import { ElementFinder } from 'protractor'
 
 export class NewEnrollmentPage extends BasePage {
 
@@ -16,7 +16,7 @@ export class NewEnrollmentPage extends BasePage {
     brand = element(by.css(".navbar-brand"));
     stateDrpDownList = element(by.css('ex-member ex-address .dropdown-toggle'));
     AkStateItem = element(by.css('ex-member ex-address .dropdown-menu li[label="AK"]'))
-    
+
     ///dropdown-menu li[label="AK"]
 
 
@@ -45,14 +45,9 @@ export class NewEnrollmentPage extends BasePage {
         this.zipCode.sendKeys('33128');
         browser.sleep(3000);
         this.stateDrpDownList.click();
-        this.AkStateItem.click();       
+        this.AkStateItem.click();
 
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 43ff6480c4e7170ef8cb21eecb0145b36e1c04b7
-    
 }
 
 
