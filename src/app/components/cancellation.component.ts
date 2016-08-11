@@ -4,25 +4,25 @@ import { Person } from '../entities/person'
 import { RandomService } from '../services/random.service';
 
 @Component({
-    selector : 'ex-cancellation',
-    moduleId : module.id,
-    templateUrl : "cancellation.component.html",
-    directives : [
+    selector: 'ex-cancellation',
+    template: require("./cancellation.component.html"),
+    moduleId: module.id,
+    directives: [
         MemberComponent
     ],
-    providers : [
+    providers: [
         RandomService
     ]
 })
-export class CancellationComponent{
+export class CancellationComponent {
 
-    deactivationDate : Date;
-    deactivationReason : string;
+    deactivationDate: Date;
+    deactivationReason: string;
 
-    constructor(private randomService: RandomService){
+    constructor(private randomService: RandomService) {
 
     }
-    generateRandomData(person : Person){
+    generateRandomData(person: Person) {
         person.exchangeId = this.randomService.getExchangeId();
         this.randomService.randomizePerson(person);
         return false;

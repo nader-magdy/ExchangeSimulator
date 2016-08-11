@@ -8,7 +8,7 @@ import { Member } from "../entities/index";
 @Component({
     selector: 'ex-member',
     moduleId: module.id,
-    templateUrl: "member.component.html",
+    template: require("./member.component.html"),
     directives: [
         PersonalInfoComponent,
         AddressComponent,

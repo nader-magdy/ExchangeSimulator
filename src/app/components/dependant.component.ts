@@ -9,7 +9,7 @@ import { RandomService } from '../services/random.service';
 @Component({
     selector: 'ex-dependant',
     moduleId: module.id,
-    templateUrl: 'dependant.component.html',
+    template: require("./dependant.component.html"),
     directives : [
         PersonalInfoComponent,
         AddressComponent,

@@ -1,12 +1,9 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
-    selector : 'ex-dashboard',
-    moduleId : module.id,
-    templateUrl : 'dashboard.component.html'
+    selector: 'ex-dashboard',
+    moduleId: module.id,
+    template: require("./dashboard.component.html")
 })
-export /**
- * DashboardComponent
- */
-class DashboardComponent {
+export class DashboardComponent {
 }

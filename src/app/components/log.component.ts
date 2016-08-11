@@ -1,13 +1,14 @@
-﻿import {Component, EventEmitter, OnInit} from '@angular/core';
-import {SocketService} from '../services/index';
-import {LogEntity} from '../entities/index';
+﻿import { Component, EventEmitter, OnInit } from '@angular/core';
+import { SocketService } from '../services/index';
+import { LogEntity } from '../entities/index';
 
 @Component({
     selector: 'log',
-    templateUrl: 'log.component.html',
+    moduleId: module.id,
+    template: require("./log.component.html"),
     providers: [SocketService]
 })
-export class LogComponent implements OnInit{
+export class LogComponent implements OnInit {
 
     public entries: LogEntity[] = [];
 
