@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run webpack:w\" \"node logger\\index.js\" \"npm run lite\" ",
+    "test" : "tsc && concurrently \"npm run tsc\" \"protractor dist\\test\\config\"",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",

@@ -5,7 +5,7 @@ import { NewEnrollmentPage } from '../pages/new-enrollment.page'
 
 let enrollmentPage: NewEnrollmentPage;
 let originalTimeout: number;
-let  json = require('../test/Test Data/Test.json');
+let  json = require('test-data/test.json');
 
 beforeEach(() => {
     enrollmentPage = new NewEnrollmentPage();
@@ -15,6 +15,7 @@ beforeEach(() => {
 
 describe("check that header h1 text is member enrollment  ", () => {
     it("header h1 text", () => {
+        console.log(json);
         enrollmentPage.maximizeWindow();
         enrollmentPage.getH1HeaderText().then((text) => {
             console.log(text);
