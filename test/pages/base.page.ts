@@ -1,7 +1,7 @@
 import {browser, element, by} from 'protractor/globals';
 
 
-export class BasePage {
+export abstract  class BasePage {
     pageUrl: string;
     baseUrl: string = 'http://localhost:3000'
     constructor(pageUrl: string) {

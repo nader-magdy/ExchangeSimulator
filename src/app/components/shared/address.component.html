@@ -7,19 +7,19 @@
             <div class="form-group">
                 <label class="col-sm-3">Address line 1</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" [(ngModel)]="address.addressLine1" placeholder="Address line 1">
+                    <input type="text" class="form-control addressLine1" [(ngModel)]="address.addressLine1" placeholder="Address line 1">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3">Address line 2</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" [(ngModel)]="address.addressLine2" placeholder="Address line 2">
+                    <input type="text" class="form-control addressLine2" [(ngModel)]="address.addressLine2" placeholder="Address line 2">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3">Zip code</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" [(ngModel)]="address.zipCode" placeholder="Zip code">
+                    <input type="text" class="form-control zipCode" [(ngModel)]="address.zipCode" placeholder="Zip code">
                 </div>
             </div>
             <div class="form-group">
@@ -31,57 +31,57 @@
     <span class="caret"></span>
   </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="max-height:200px; overflow-y: auto;">
-                            <li (click)="selectState('AL')"><a href="#">AL</a></li>
-                            <li (click)="selectState('AK')"><a href="#">AK</a></li>
-                            <li (click)="selectState('AZ')"><a href="#">AZ</a></li>
-                            <li (click)="selectState('AR')"><a href="#">AR</a></li>
-                            <li (click)="selectState('CA')"><a href="#">CA</a></li>
-                            <li (click)="selectState('CO')"><a href="#">CO</a></li>
-                            <li (click)="selectState('CT')"><a href="#">CT</a></li>
-                            <li (click)="selectState('DE')"><a href="#">DE</a></li>
-                            <li (click)="selectState('DC')"><a href="#">DC</a></li>
-                            <li (click)="selectState('FL')"><a href="#">FL</a></li>
-                            <li (click)="selectState('GA')"><a href="#">GA</a></li>
-                            <li (click)="selectState('HI')"><a href="#">HI</a></li>
-                            <li (click)="selectState('ID')"><a href="#">ID</a></li>
-                            <li (click)="selectState('IL')"><a href="#">IL</a></li>
-                            <li (click)="selectState('IN')"><a href="#">IN</a></li>
-                            <li (click)="selectState('IA')"><a href="#">IA</a></li>
-                            <li (click)="selectState('KS')"><a href="#">KS</a></li>
-                            <li (click)="selectState('KY')"><a href="#">KY</a></li>
-                            <li (click)="selectState('LA')"><a href="#">LA</a></li>
-                            <li (click)="selectState('ME')"><a href="#">ME</a></li>
-                            <li (click)="selectState('MD')"><a href="#">MD</a></li>
-                            <li (click)="selectState('MA')"><a href="#">MA</a></li>
-                            <li (click)="selectState('MI')"><a href="#">MI</a></li>
-                            <li (click)="selectState('MN')"><a href="#">MN</a></li>
-                            <li (click)="selectState('MS')"><a href="#">MS</a></li>
-                            <li (click)="selectState('MO')"><a href="#">MO</a></li>
-                            <li (click)="selectState('MT')"><a href="#">MT</a></li>
-                            <li (click)="selectState('NE')"><a href="#">NE</a></li>
-                            <li (click)="selectState('NV')"><a href="#">NV</a></li>
-                            <li (click)="selectState('NH')"><a href="#">NH</a></li>
-                            <li (click)="selectState('NJ')"><a href="#">NJ</a></li>
-                            <li (click)="selectState('NM')"><a href="#">NM</a></li>
-                            <li (click)="selectState('NY')"><a href="#">NY</a></li>
-                            <li (click)="selectState('NC')"><a href="#">NC</a></li>
-                            <li (click)="selectState('ND')"><a href="#">ND</a></li>
-                            <li (click)="selectState('OH')"><a href="#">OH</a></li>
-                            <li (click)="selectState('OK')"><a href="#">OK</a></li>
-                            <li (click)="selectState('OR')"><a href="#">OR</a></li>
-                            <li (click)="selectState('PA')"><a href="#">PA</a></li>
-                            <li (click)="selectState('RI')"><a href="#">RI</a></li>
-                            <li (click)="selectState('SC')"><a href="#">SC</a></li>
-                            <li (click)="selectState('SD')"><a href="#">SD</a></li>
-                            <li (click)="selectState('TN')"><a href="#">TN</a></li>
-                            <li (click)="selectState('TX')"><a href="#">TX</a></li>
-                            <li (click)="selectState('UT')"><a href="#">UT</a></li>
-                            <li (click)="selectState('VT')"><a href="#">VT</a></li>
-                            <li (click)="selectState('VA')"><a href="#">VA</a></li>
-                            <li (click)="selectState('WA')"><a href="#">WA</a></li>
-                            <li (click)="selectState('WV')"><a href="#">WV</a></li>
-                            <li (click)="selectState('WI')"><a href="#">WI</a></li>
-                            <li><a href="#">WY</a></li>
+                            <li label="AL" (click)="selectState('AL')"><a href="#">AL</a></li>
+                            <li label="AK" (click)="selectState('AK')"><a href="#">AK</a></li>
+                            <li label="AZ" (click)="selectState('AZ')"><a href="#">AZ</a></li>
+                            <li label="AR" (click)="selectState('AR')"><a href="#">AR</a></li>
+                            <li label="CA" (click)="selectState('CA')"><a href="#">CA</a></li>
+                            <li label="CO" (click)="selectState('CO')"><a href="#">CO</a></li>
+                            <li label="CT" (click)="selectState('CT')"><a href="#">CT</a></li>
+                            <li label="DE" (click)="selectState('DE')"><a href="#">DE</a></li>
+                            <li label="DC" (click)="selectState('DC')"><a href="#">DC</a></li>
+                            <li label="FL" (click)="selectState('FL')"><a href="#">FL</a></li>
+                            <li label="GA" (click)="selectState('GA')"><a href="#">GA</a></li>
+                            <li label="HI" (click)="selectState('HI')"><a href="#">HI</a></li>
+                            <li label="ID" (click)="selectState('ID')"><a href="#">ID</a></li>
+                            <li label="IL" (click)="selectState('IL')"><a href="#">IL</a></li>
+                            <li label="IN" (click)="selectState('IN')"><a href="#">IN</a></li>
+                            <li label="IA" (click)="selectState('IA')"><a href="#">IA</a></li>
+                            <li label="KS" (click)="selectState('KS')"><a href="#">KS</a></li>
+                            <li label="KY" (click)="selectState('KY')"><a href="#">KY</a></li>
+                            <li label="LA" (click)="selectState('LA')"><a href="#">LA</a></li>
+                            <li label="ME" (click)="selectState('ME')"><a href="#">ME</a></li>
+                            <li label="MD" (click)="selectState('MD')"><a href="#">MD</a></li>
+                            <li label="MA" (click)="selectState('MA')"><a href="#">MA</a></li>
+                            <li label="MI" (click)="selectState('MI')"><a href="#">MI</a></li>
+                            <li label="MN" (click)="selectState('MN')"><a href="#">MN</a></li>
+                            <li label="MS" (click)="selectState('MS')"><a href="#">MS</a></li>
+                            <li label="MO" (click)="selectState('MO')"><a href="#">MO</a></li>
+                            <li label="MT" (click)="selectState('MT')"><a href="#">MT</a></li>
+                            <li label="NE" (click)="selectState('NE')"><a href="#">NE</a></li>
+                            <li label="NV" (click)="selectState('NV')"><a href="#">NV</a></li>
+                            <li label="NH" (click)="selectState('NH')"><a href="#">NH</a></li>
+                            <li label="NJ" (click)="selectState('NJ')"><a href="#">NJ</a></li>
+                            <li label="NM" (click)="selectState('NM')"><a href="#">NM</a></li>
+                            <li label="NY" (click)="selectState('NY')"><a href="#">NY</a></li>
+                            <li label="NC" (click)="selectState('NC')"><a href="#">NC</a></li>
+                            <li label="ND" (click)="selectState('ND')"><a href="#">ND</a></li>
+                            <li label="OH" (click)="selectState('OH')"><a href="#">OH</a></li>
+                            <li label="OK" (click)="selectState('OK')"><a href="#">OK</a></li>
+                            <li label="OR" (click)="selectState('OR')"><a href="#">OR</a></li>
+                            <li label="PA" (click)="selectState('PA')"><a href="#">PA</a></li>
+                            <li label="RI" (click)="selectState('RI')"><a href="#">RI</a></li>
+                            <li label="SC" (click)="selectState('SC')"><a href="#">SC</a></li>
+                            <li label="SD" (click)="selectState('SD')"><a href="#">SD</a></li>
+                            <li label="TN" (click)="selectState('TN')"><a href="#">TN</a></li>
+                            <li label="TX" (click)="selectState('TX')"><a href="#">TX</a></li>
+                            <li label="UT" (click)="selectState('UT')"><a href="#">UT</a></li>
+                            <li label="VT" (click)="selectState('VT')"><a href="#">VT</a></li>
+                            <li label="VA" (click)="selectState('VA')"><a href="#">VA</a></li>
+                            <li label="WA" (click)="selectState('WA')"><a href="#">WA</a></li>
+                            <li label="WV" (click)="selectState('WV')"><a href="#">WV</a></li>
+                            <li label="WI" (click)="selectState('WI')"><a href="#">WI</a></li>
+                            <li label="WY" (click)="selectState('WY')"><a href="#">WY</a></li>
                         </ul>
                     </div>
                 </div>

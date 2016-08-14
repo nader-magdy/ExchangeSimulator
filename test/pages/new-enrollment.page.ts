@@ -1,6 +1,8 @@
 import { BasePage } from './base.page'
 import { browser, element, by } from 'protractor/globals';
 import { ElementFinder } from 'protractor'
+import { Address } from '../../src/app/entities/index'
+
 
 export class NewEnrollmentPage extends BasePage {
 
@@ -39,10 +41,10 @@ export class NewEnrollmentPage extends BasePage {
         return this.brand.isDisplayed();
     }
 
-    fillAddressContact() {
-        this.Address1.sendKeys('Embaba');
-        this.Address2.sendKeys('giza');
-        this.zipCode.sendKeys('33128');
+    fillAddressContact(address:Address) {
+        this.Address1.sendKeys(address.addressLine1);
+        this.Address2.sendKeys(address.addressLine2);
+        this.zipCode.sendKeys(address.zipCode);
         browser.sleep(3000);
         this.stateDrpDownList.click();
         this.AkStateItem.click();
