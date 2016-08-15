@@ -5,7 +5,7 @@ import { NewEnrollmentPage } from '../pages/new-enrollment.page'
 
 let enrollmentPage: NewEnrollmentPage;
 let originalTimeout: number;
-let  json = require('test-data/test.json');
+let json = require('test-data/test.json');
 
 beforeEach(() => {
     enrollmentPage = new NewEnrollmentPage();
@@ -27,8 +27,8 @@ describe("check that header h1 text is member enrollment  ", () => {
 
 describe("check that fillWithRandomData button worked well  ", () => {
     it("fillWithRandomData button", () => {
-       //var personalAddress = new Address();
-      
+        //var personalAddress = new Address();
+
         enrollmentPage.fillWithRandomData().then(() => {
             enrollmentPage.fillAddressContact(json);
             enrollmentPage.exchangeId.getAttribute('value').then(function (value) {
@@ -43,7 +43,23 @@ describe("check that fillWithRandomData button worked well  ", () => {
 describe("check that brand displayed  ", () => {
     it("brand is a logo  ", () => {
         expect(enrollmentPage.isBrandVisible).toBeTruthy();
+    });
+});
+
+describe("check handles", () => {
+    it("Chek in handle in current tab", () => {
+        enrollmentPage.getAllWindowHandles().then((handles) => {
+            // parentHandle = handles[0];
+            var popUpHandle = handles[0];
+
+            // Change to new handle
+            browser.driver.switchTo().window(popUpHandle);
+
+            var popUpHandleFinal = browser.driver.getWindowHandle();
+            expect(popUpHandleFinal).toEqual(popUpHandle);
         });
+
+    });
 });
 
 

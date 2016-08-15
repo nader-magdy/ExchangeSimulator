@@ -1,7 +1,8 @@
 import {browser, element, by} from 'protractor/globals';
+var webdriver = require('selenium-webdriver');
 
 
-export abstract  class BasePage {
+export abstract class BasePage {
     pageUrl: string;
     baseUrl: string = 'http://localhost:3000'
     constructor(pageUrl: string) {
@@ -12,18 +13,20 @@ export abstract  class BasePage {
     maximizeWindow() {
         browser.driver.manage().window().maximize();
     }
-    Title(): Promise<any>{
+    Title(): Promise<any> {
         return browser.getTitle();
     }
-    ImplicitWait(){
+    ImplicitWait() {
         browser.driver.manage().implicitWait();
     }
-  
+    getAllWindowHandles() {
+        return browser.driver.getAllWindowHandles();
+    }
     /**
      * return true if the web element has been filled otherwise return false
      *
      * @param {ElementFinder} ele element check 
      */
-   
+
 
 }
