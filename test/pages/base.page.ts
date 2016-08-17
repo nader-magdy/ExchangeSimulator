@@ -1,3 +1,4 @@
+"use strict";
 import {browser, element, by} from 'protractor/globals';
 var webdriver = require('selenium-webdriver');
 
@@ -13,20 +14,33 @@ export abstract class BasePage {
     maximizeWindow() {
         browser.driver.manage().window().maximize();
     }
-    Title(): Promise<any> {
+    title(): Promise<any> {
         return browser.getTitle();
     }
-    ImplicitWait() {
+    implicitWait() {
         browser.driver.manage().implicitWait();
     }
     getAllWindowHandles() {
         return browser.driver.getAllWindowHandles();
     }
+    closeBrowser() {
+        browser.driver.quit();
+    }
+    explicitWait(condition: any, opt_timeout: number, opt_message: string) {
+        browser.wait(condition, opt_timeout, opt_message);
+        return true;
+    }
+
+
+
+}
+
+
     /**
+     * 
      * return true if the web element has been filled otherwise return false
      *
      * @param {ElementFinder} ele element check 
      */
 
 
-}
