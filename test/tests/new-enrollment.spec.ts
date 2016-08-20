@@ -11,24 +11,29 @@ let json = require('test-data/test.json');
 
 beforeEach(() => {
     enrollmentPage = enrollmentPage || new NewEnrollmentPage();
+    enrollmentPage.maximizeWindow();
     originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 });
 
-describe("check that header h1 text is member enrollment  ", () => {
-    it("header h1 text", () => {
+describe("check that header h1 text is member enrollment and title was printed  ", () => {
+    it("Print Title", () => {
         //console.log(json);
-        enrollmentPage.maximizeWindow();
-        //expect(enrollmentPage.explicitWait(enrollmentPage.getH1HeaderText(), 20, "error in a function")).toBeTruthy();
-        //let text = enrollmentPage.getH1HeaderText();
-        enrollmentPage.getH1HeaderText().then((text) => {
+        let title = enrollmentPage.title();
+        title.then(function (value) {
+            console.log(value);
+        });
+    });
+
+    it("check H1 is an Enrollment New Member", () => {
+            enrollmentPage.getH1HeaderText().then((text) => {
             console.log(text);
             expect(text).toContain("Enrollemnt New Member");
-
         });
-
     });
 });
+
+
 
 describe("explicit wait  ", () => {
     it("check brand displayed or not ", () => {
@@ -55,9 +60,10 @@ describe("check that fillWithRandomData button worked well  ", () => {
             enrollmentPage.exchangeId_txt.getAttribute('value').then(function (value) {
                 expect(value).toBeTruthy();
             });
+            enrollmentPage.takeScreenShot().then(function(png){
+                    enrollmentPage.writeScreenShot(png,'./test/ScreenShot/exception.png')
+            });
         });
-
-
     });
 });
 describe("check number of state and number of bar Items  displayed correctly or not   ", () => {

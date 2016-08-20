@@ -1,6 +1,6 @@
 import { BasePage } from './base.page'
 import { browser, element, by } from 'protractor/globals';
-import { ElementFinder,ElementArrayFinder } from 'protractor'
+import { ElementFinder, ElementArrayFinder } from 'protractor'
 import { Address } from '../../src/app/entities/index'
 
 
@@ -27,16 +27,16 @@ export class NewEnrollmentPage extends BasePage {
     }
 
 
-    getH1HeaderText(): Promise<any> {
+    getH1HeaderText() {
         return this.h1HeaderTxt.getText();
     }
 
-    generatedX12LastName(): Promise<any> {
+    generatedX12LastName() {
         return this.lastName_Generated_X12.getText();
     }
     generatedRandomLastName() {
         return this.lastName_txt.getText();
-        }
+    }
 
     fillWithRandomData() {
 
@@ -57,14 +57,12 @@ export class NewEnrollmentPage extends BasePage {
         this.AkStateItem.click();
 
     }
-    getNumberOfStates()
-    {
-        let Count=element.all(by.css("ex-address > div > div.panel-body > form > div:nth-child(4) > div > div > ul > li")).count();
+    getNumberOfStates() {
+        let Count = element.all(by.css("ex-address > div > div.panel-body > form > div:nth-child(4) > div > div > ul > li")).count();
         return Count;
     }
-    getNumberOfBarItems()
-    {
-        let Barcount=element.all(by.css('div.collapse.navbar-collapse.navbar-ex1-collapse > ul >li')).count();
+    getNumberOfBarItems() {
+        let Barcount = element.all(by.css('div.collapse.navbar-collapse.navbar-ex1-collapse > ul >li')).count();
         return Barcount;
     }
 }

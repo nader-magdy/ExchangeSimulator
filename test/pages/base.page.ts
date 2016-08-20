@@ -1,20 +1,27 @@
 "use strict";
-import {browser, element, by} from 'protractor/globals';
+import {browser, element, by,ExpectedConditions} from 'protractor/globals';
 var webdriver = require('selenium-webdriver');
+var fs = require('fs');
 
 
 export abstract class BasePage {
+
     pageUrl: string;
     baseUrl: string = 'http://localhost:3000'
+    
     constructor(pageUrl: string) {
         this.pageUrl = pageUrl;
         browser.get(`${this.baseUrl}/${this.pageUrl}`);
     }
 
+
     maximizeWindow() {
         browser.driver.manage().window().maximize();
     }
-    title(): Promise<any> {
+    takeScreenShot() {
+        return browser.takeScreenshot();
+    }
+    title() {
         return browser.getTitle();
     }
     implicitWait() {
@@ -31,6 +38,15 @@ export abstract class BasePage {
         return true;
     }
 
+    writeScreenShot(data, filename) {
+        let stream = fs.createWriteStream(filename);
+        stream.write(new Buffer(data, 'base64'));
+        stream.end();
+    }
+   getProcessedConfig()
+    {
+        return browser.getProcessedConfig();
+    }
 
 
 }
