@@ -61,7 +61,7 @@ describe("check that fillWithRandomData button worked well  ", () => {
                 expect(value).toBeTruthy();
             });
             enrollmentPage.takeScreenShot().then(function(png){
-                    enrollmentPage.writeScreenShot(png,'./test/ScreenShot/exception.png')
+                    enrollmentPage.writeScreenShot(png,'./tests/ScreenShot/exception.png')
             });
         });
     });
